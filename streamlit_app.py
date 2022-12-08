@@ -3,8 +3,8 @@ import plotly.express as px
 import streamlit as st
 
 # Display title and text
-st.title("Data and visualization of Amsterdam Airbnb Listings")
-st.markdown("Amsterdam Airbnb listings with distance in meters from The Van Goh Musuem.")
+st.title("Data and Visualization of Amsterdam Airbnb Listings")
+st.markdown("Amsterdam Airbnb listings with distance in meters from The Van Gogh Museum.")
 
 # Read dataframe
 dataframe = pd.read_csv(
@@ -34,7 +34,7 @@ dataframe["Location"] = dataframe["Location"].replace(
 
 # Display dataframe and text
 st.dataframe(dataframe)
-st.markdown("Below is a map showing all the Airbnb listings with a red dot and The Van Goh Musuem with a blue dot.")
+st.markdown("Below is a map showing all the Airbnb listings with a red dot and The Van Gogh Museum with a blue dot.")
 
 # Create the plotly express figure
 fig = px.scatter_mapbox(
